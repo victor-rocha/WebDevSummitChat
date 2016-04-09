@@ -1,0 +1,35 @@
+<head>
+  <title>Chat com Meteor.js</title>
+</head>
+
+<body>  
+<div class="container">
+  <div class="page-header">
+    <h1>Chat com Meteor.js <small>{{> bemvindo }}</small></h1>
+  </div>  
+  {{> input }}
+  {{> mensagens }}
+</div>  
+</body>
+
+<template name="bemvindo">
+    Bem-vindo, {{nome}}
+</template>
+
+<template name="mensagens">
+Mensagens enviadas: <span class="label label-success label-as-badge">{{counter}}</span>
+
+<div class="well" style="margin-top: 10px;">
+  {{#each mensagensUsuarios}}
+    <strong>{{nome}}: ({{formatDate data}})</strong> {{mensagem}}<br>
+  {{/each}}
+  </div>  
+</template>
+
+<template name="input">
+<div class="form-group">
+    <label for="exampleInputEmail1">Mensagem:</label>
+    <input type="text" class="form-control" style="width:90%;" id="message" placeholder="Pressione Enter para enviar ou clique no botão ao lado">
+    <button class="btn btn-success pull-right" id="btnEnviar" style="margin-top:-35px">Enviar</button>
+  </div>
+</template>
