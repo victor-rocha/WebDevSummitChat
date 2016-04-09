@@ -10,7 +10,6 @@ Para OSX ou Linux:
 
 ```
 curl https://install.meteor.com/ | sh
-
 ```
 
 Para Windows:
@@ -25,4 +24,4 @@ meteor
 
 Por padrão, o meteor irá rodar a aplicação na porta 3000, resultando no endereço: ```http://localhost:3000```
 
-Espero que goste! :D
+Espero que goste! :}
